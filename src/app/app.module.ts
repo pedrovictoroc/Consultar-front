@@ -8,6 +8,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WhiteBackgroundComponent } from './components/buttons/white-background/white-background.component';
 import { GreenBackgroundComponent } from './components/buttons/green-background/green-background.component';
+import { HomeComponent } from './pages/home/home.component';
+import { NewAppointmentComponent } from './components/modals/new-appointment/new-appointment.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { GreenBackgroundComponent } from './components/buttons/green-background/
     LoginComponent,
     RegisterComponent,
     WhiteBackgroundComponent,
-    GreenBackgroundComponent
+    GreenBackgroundComponent,
+    HomeComponent,
+    NewAppointmentComponent
   ],
   imports: [
     BrowserModule,
