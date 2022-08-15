@@ -4,28 +4,51 @@
             <img src="../../../assets/logo.svg">
             <h1>Medicar</h1>
         </div>
-        
-        <form class="login-form">
-            <h2>Criar sua conta</h2>
-            <input class="login-data-input" placeholder="Email ou Login"/>
+    
+        <form class="login-form" 
+              [formGroup]="registerForm" 
+              (ngSubmit)="onSubmit()"
+              id="loginform">
+
+            <h2>Crie sua conta</h2>
+            
+            <input class="login-data-input" 
+                    style="margin-top: 20px;"
+                    placeholder="Nome"/>
+                    
+            <input class="login-data-input" 
+                    placeholder="Email"/>
             <div class="login-password-container">
                 <input class="login-data-input" placeholder="Senha"/>
-                <img [src]="eyeIcon" style="width: 24px; height: 24px">
+                <button (click)="setEyeIconPassword()"
+                        type="button"
+                        style="cursor: pointer;">
+                    <img [src]="getEyeIconPassword()" style="width: 24px; height: 24px">
+                </button>
             </div>
-            <label class="login-checkbox-section">
-                <input type="checkbox" />
-                Lembrar minha senha
-            </label>
+            <div class="login-password-container">
+                <input class="login-data-input" placeholder="Confirmar senha"/>
+                <button (click)="setEyeIconConfirmPassword()"
+                        type="button"
+                        style="cursor: pointer;">
+                    <img [src]=" getEyeIconConfirmPassword()"
+                         style="width: 24px; height: 24px">
+                </button>
+            </div>
         </form>
 
         <div class="login-button-section">
-            <button class="login-create-account-button">
-                Criar Conta
+            <button class="login-create-account-button"
+                    type="button"
+                    (click)="redirectToLogin()">
+                Cancelar
             </button>
 
             
-            <button class="login-access-button">
-                Acessar
+            <button class="login-access-button" 
+                    type="submit"
+                    form="loginform">
+                Confirmar
             </button>
         </div>
     </div>

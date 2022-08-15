@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,10 +9,45 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  eyeIcon: string = "../../../assets/eye-closed.svg"
-  constructor() { }
+  shoulDisplayPassword: boolean = false;
+  shoulDisplayConfirmPassword: boolean = false;
+  eyeIconClosed: string = "../../../assets/eye-closed.svg"
+  eyeIconOpen: string = "../../../assets/eye-open.svg"
+  registerForm: FormGroup = this.formBuilder.group({
+    email: '',
+    password: ''
+  })
+  
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
+  }
+
+  setEyeIconPassword(){
+    this.shoulDisplayPassword = !this.shoulDisplayPassword
+  }
+
+  setEyeIconConfirmPassword(){
+    this.shoulDisplayConfirmPassword = !this.shoulDisplayConfirmPassword
+  }
+
+  getEyeIconPassword(){
+    return this.shoulDisplayPassword ? this.eyeIconOpen : this.eyeIconClosed
+  }
+
+  getEyeIconConfirmPassword(){
+    return this.shoulDisplayConfirmPassword ? this.eyeIconOpen : this.eyeIconClosed
+  }
+
+  onSubmit(){
+    return true
+  }
+
+  redirectToLogin(){
+    this.router.navigate(['login'])
   }
 
 }
