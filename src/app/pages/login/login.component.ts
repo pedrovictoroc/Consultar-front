@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,10 @@ export class LoginComponent implements OnInit {
     password: ''
   })
   
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
   }
@@ -32,6 +36,10 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     console.log('teste')
     return true
+  }
+
+  redirectToRegister(){
+    this.router.navigate(['registrar'])
   }
 
 }
