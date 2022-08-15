@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     console.log('teste')
-    return true
+    this.router.navigate(['home'])
   }
 
   redirectToRegister(){

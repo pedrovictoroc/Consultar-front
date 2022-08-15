@@ -5,10 +5,10 @@
             <h1>Medicar</h1>
         </div>
     
-        <form class="login-form" 
+        <form class="register-form" 
               [formGroup]="registerForm" 
               (ngSubmit)="onSubmit()"
-              id="loginform">
+              id="register-form">
 
             <h2>Crie sua conta</h2>
             
@@ -46,7 +46,7 @@
             <button-green-background
                 [textContent]= "'Confirmar'"
                 [type] = "'submit'"
-                [form]="'login-form'">
+                [form]="'register-form'">
             </button-green-background>
         </div>
     </div>

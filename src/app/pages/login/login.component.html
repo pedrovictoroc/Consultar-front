@@ -8,7 +8,7 @@
         <form class="login-form" 
               [formGroup]="loginForm" 
               (ngSubmit)="onSubmit()"
-              id="loginform">
+              id="login-form">
             <input class="login-data-input" placeholder="Email ou Login"/>
             <div class="login-password-container">
                 <input class="login-data-input" placeholder="Senha"/>
@@ -33,7 +33,7 @@
             <button-green-background
                 [textContent]= "'Acessar'"
                 [type] = "'submit'"
-                [form]="'form'">
+                [form]="'login-form'">
             </button-green-background>
         </div>
     </div>
