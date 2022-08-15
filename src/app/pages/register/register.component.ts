@@ -45,7 +45,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log('teste')
     this.router.navigate(['home'])
   }
 
