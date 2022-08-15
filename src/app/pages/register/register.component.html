@@ -38,18 +38,16 @@
         </form>
 
         <div class="login-button-section">
-            <button class="login-create-account-button"
-                    type="button"
-                    (click)="redirectToLogin()">
-                Cancelar
-            </button>
-
-            
-            <button class="login-access-button" 
-                    type="submit"
-                    form="loginform">
-                Confirmar
-            </button>
+            <button-white-background
+                [textContent]= "'Cancelar'"
+                [type] = "'button'"
+                (pressed) = "redirectToLogin()">
+            </button-white-background>
+            <button-green-background
+                [textContent]= "'Confirmar'"
+                [type] = "'submit'"
+                [form]="'login-form'">
+            </button-green-background>
         </div>
     </div>
 </section>

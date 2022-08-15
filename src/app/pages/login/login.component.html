@@ -25,18 +25,16 @@
         </form>
 
         <div class="login-button-section">
-            <button class="login-create-account-button"
-                    type="button"
-                    (click)="redirectToRegister()">
-                Criar Conta
-            </button>
-
-            
-            <button class="login-access-button" 
-                    type="submit"
-                    form="loginform">
-                Acessar
-            </button>
+            <button-white-background
+                [textContent]= "'Criar Conta'"
+                [type] = "'button'"
+                (pressed) = "redirectToRegister()">
+            </button-white-background>
+            <button-green-background
+                [textContent]= "'Acessar'"
+                [type] = "'submit'"
+                [form]="'form'">
+            </button-green-background>
         </div>
     </div>
 </section>
