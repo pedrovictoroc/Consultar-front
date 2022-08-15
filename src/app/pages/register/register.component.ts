@@ -14,8 +14,10 @@ export class RegisterComponent implements OnInit {
   eyeIconClosed: string = "../../../assets/eye-closed.svg"
   eyeIconOpen: string = "../../../assets/eye-open.svg"
   registerForm: FormGroup = this.formBuilder.group({
+    name: '',
     email: '',
-    password: ''
+    password: '',
+    confirmPassword: ''
   })
   
   constructor(
