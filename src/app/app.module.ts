@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WhiteBackgroundComponent } from './components/buttons/white-background/white-background.component';
+import { GreenBackgroundComponent } from './components/buttons/green-background/green-background.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    WhiteBackgroundComponent,
+    GreenBackgroundComponent
   ],
   imports: [
     BrowserModule,
