@@ -17,7 +17,7 @@
         <div class="home-appointment-header">
             <h2>Consulta Clínica</h2>
 
-            <button>
+            <button (click)="handleShouldDisplayNewAppointmentModal()">
                 <img src="../../../assets//plus.svg"
                      style="width: 10px;"/>
                 Nova Consulta
@@ -47,3 +47,8 @@
         </div>
     </section>
 </section>
+
+<new-appointment-modal 
+    *ngIf="shouldDisplayNewAppointmentModal"
+    (modalClose) = "handleShouldDisplayNewAppointmentModal()">
+</new-appointment-modal>

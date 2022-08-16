@@ -1,0 +1,28 @@
+.new-appointment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.75);
+}
+
+.new-appointment-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #FFFFFF;
+    padding: 40px 40px 40px 40px;
+}
+
+.new-appointment-container > select {
+    margin-top: 20px;
+    height: 40px;
+    width: 400px;
+    
+}

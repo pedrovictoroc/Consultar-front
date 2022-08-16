@@ -1,1 +1,36 @@
-<p>new-appointment works!</p>
+<aside class="new-appointment-overlay">
+
+    <section class="new-appointment-container">
+        <h1>Nova Consulta</h1>
+
+        <select>
+            <option>Pediatria</option>
+        </select>
+    
+        <select>
+            <option>Dr. Caio Carlos Ferreira</option>
+        </select>
+    
+        <select>
+            <option>01/01/2001</option>
+        </select>
+        
+        <select>
+            <option>13:00</option>
+        </select>
+
+        
+        <div class="login-button-section">
+            <button-white-background
+                [textContent]= "'Cancelar'"
+                [type] = "'button'"
+                (pressed) = "closeModal()">
+            </button-white-background>
+            <button-green-background
+                [textContent]= "'Confirmar'"
+                [type] = "'button'"
+                (pressed) = "handleAppointment()">
+            </button-green-background>
+        </div>
+    </section>
+</aside>

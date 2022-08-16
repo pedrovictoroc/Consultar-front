@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  shouldDisplayNewAppointmentModal: boolean = false
   appointmentsList = [
     {
       specialty: "Cardiologia",
@@ -64,6 +65,10 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+
+  handleShouldDisplayNewAppointmentModal(){
+    this.shouldDisplayNewAppointmentModal = !this.shouldDisplayNewAppointmentModal
   }
 
   navigateToLogin(){
