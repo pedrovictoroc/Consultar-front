@@ -1,0 +1,111 @@
+.home-main-section {
+    width: 60vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 20px 0px 20px 0px;
+}
+
+.home-header-content {
+    display: flex;
+    align-items: center;
+}
+
+.home-header-content > img {
+    width: 50px;
+    height: 50px;
+}
+
+.home-header-content > h1 {
+    color: #444444;
+    margin-left: 12px;
+}
+
+.home-header-content > p {
+    color: #A8A8A8;
+    margin-right: 16px;
+}
+
+
+.home-header-content > button {
+    color: #49B4BB;
+    outline: none;
+    border: none;
+    background-color: unset;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.home-appointment-section {
+    width: 100%;
+    height: 85%;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    padding: 20px 10px 20px 10px;
+}
+
+.home-appointment-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.home-appointment-header > h2 {
+    color: #444444;
+}
+
+.home-appointment-header > button {
+    outline: none;
+    border: none;
+    background-color: #49B4BB;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;   
+    padding: 6px 12px 6px 12px;
+}
+
+.home-appointment-list {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-appointment-list-labels {
+    display: grid;
+    grid-template-columns: 25% 25% 20% 10% 20%;
+    color: #A8A8A8;
+}
+
+.home-appointment-list-body {
+    display: grid;
+    grid-template-columns: 25% 25% 20% 10% 20%;
+    padding: 10px 0px 10px 0px;
+}
+
+.home-appointment-list-body:nth-child(even){
+    background: #F8F8F8;
+}
+
+.home-appointment-list-body > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: unset;
+    outline: none;
+    cursor: pointer;
+    color: #49B4BB;
+}

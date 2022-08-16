@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,66 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  appointmentsList = [
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    },
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    },
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    },
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    },
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    },
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    },
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    },
+    {
+      specialty: "Cardiologia",
+      professional: "Dr. Caio Carlos Ferreira",
+      date: "01/01/1920",
+      hour: "13:30"
+    }
+  ]
+
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToLogin(){
+    this.router.navigate(['login'])
   }
 
 }
